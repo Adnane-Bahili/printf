@@ -35,26 +35,23 @@ int (*prmts_ch(char specifier))(char *, int, va_list)
 /**
  * _printf - prints input
  * @format: string
- * 
  * Return: printed input
  */
 int _printf(const char *format, ...)
 {
+	int  i, comp;
 	char *buf;
-	int  i = 0, comp = 0;
-
 	va_list arg_val;
 	int (*fun)(char *, int, va_list);
 
+	i = comp = 0;
 	buf = malloc(4000);
 		if ((!format || !buf) || (format[0] == '%' && format[1] == '\0'))
 		{
 			free(buf);
 			exit(1);
 		}
-
 	va_start(arg_val, format);
-
 	while (format[i])
 	{
 		if (format[i] != '%')
