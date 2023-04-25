@@ -51,10 +51,7 @@ int _printf(const char *format, ...)
 	i = comp = 0;
 	buf = malloc(4000);
 		if ((!format || !buf) || (format[0] == '%' && format[1] == '\0'))
-		{
-			free(buf);
 			return (-1);
-		}
 	va_start(arg_val, format);
 	while (format[i])
 	{
@@ -66,9 +63,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			if (format[i + 1] == '\0')
-			{
 				return (-1);
-			}
 			fun = prmts_ch(format[i + 1]);
 			if (!fun)
 			{
