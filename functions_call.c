@@ -4,7 +4,7 @@
  * @buf: string variable
  * @comp: counter
  * @val: value
- * 
+ *
  * Return: integer
  */
 int _asgn(char *buf, int comp, char *val)
@@ -24,7 +24,7 @@ int _asgn(char *buf, int comp, char *val)
  * @buf: string variable
  * @comp: counter
  * @val: value
- * 
+ *
  * Return: integer
  */
 int _rev_asgn(char *buf, int comp, char *val)

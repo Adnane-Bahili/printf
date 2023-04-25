@@ -2,7 +2,7 @@
 /**
  * _abs_val - absolute value
  * @n: number
- * 
+ *
  * Return: integer
  */
 int _abs_val(int n)
@@ -18,7 +18,7 @@ int _abs_val(int n)
  * *_inttochrptr - Modifies integer to character pointer
  * @val: value
  * @base: to convert
- * 
+ *
  * Return: character pointer
  */
 char *_inttochrptr(int val, int base)
@@ -61,7 +61,7 @@ char *_inttochrptr(int val, int base)
  * *_unstochrptr - Modifies unsigned to character pointer
  * @val: value
  * @base: to convert
- * 
+ *
  * Return: character pointer
  */
 char *_unstochrptr(unsigned int val, unsigned int base)
@@ -95,7 +95,7 @@ char *_unstochrptr(unsigned int val, unsigned int base)
  * *_lc_unstochrptr - Modifies unsigned to character pointer with lower case
  * @val: value
  * @base: to convert
- * 
+ *
  * Return: character pointer
  */
 char *_lc_unstochrptr(unsigned int val, unsigned int base)

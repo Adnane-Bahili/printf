@@ -2,7 +2,7 @@
 /**
  * _strlen - string length
  * @s: string variable
- * 
+ *
  * Return: Integer
  */
 int _strlen(char *s)
@@ -15,9 +15,9 @@ int _strlen(char *s)
 }
 /**
  * *_strcpy - copies string
- * @dest: pointer 
+ * @dest: pointer
  * @src: string
- * 
+ *
  * Return: array result
  */
 
@@ -32,7 +32,7 @@ void _strcpy(char *dest, char *src)
 /**
  * _rev_ptr - Reverses pointer
  * @str: string variable
- * 
+ *
  * Return: void
  */
 void _rev_ptr(char *str)
@@ -51,7 +51,7 @@ void _rev_ptr(char *str)
  * *_rev - Reverses an array of integers
  * @s: Array
  * @n: elements of array
- * 
+ *
  * Return: character pointer
  */
 char *_rev(char *s, int n)
@@ -72,7 +72,7 @@ char *_rev(char *s, int n)
 /**
  * *_rot13 - encodes string using rot13
  * @str: string
- * 
+ *
  * Return: encoded string
  */
 char *_rot13(char *str)
