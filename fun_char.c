@@ -10,14 +10,9 @@
  */
 int fun_char(char *buf, int comp, va_list val)
 {
-	int ch = va_arg(val, int);
+	char ch;
 
-	if (!ch)
-	{
-		write(1, "\0\0", 2);
-		free(buf);
-		exit(0);
-	}
+	ch = va_arg(val, int);
 	buf[0] = ch;
 	return (comp + 1);
 }

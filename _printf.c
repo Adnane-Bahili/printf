@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stddef.h>
+
 /**
  * *prmts_ch - parameter checker
  * @specifier: string variable
@@ -22,15 +24,17 @@ int (*prmts_ch(char specifier))(char *, int, va_list)
 		{"x", fun_hex},
 		{"X", fun_HEX},
 		{"%", fun_pct},
+		{NULL, NULL}
 	};
-
 	while (arg_ptr[j].c)
 	{
 		if (specifier == *arg_ptr[j].c)
-			break;
+		{
+			return (arg_ptr[j].f);
+		}
 		j++;
 	}
-	return (arg_ptr[j].f);
+	return (NULL);
 }
 /**
  * _printf - prints input
@@ -49,7 +53,7 @@ int _printf(const char *format, ...)
 		if ((!format || !buf) || (format[0] == '%' && format[1] == '\0'))
 		{
 			free(buf);
-			exit(1);
+			return (-1);
 		}
 	va_start(arg_val, format);
 	while (format[i])
@@ -61,16 +65,21 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
+			if (format[i + 1] == '\0')
+			{
+				return (-1);
+			}
 			fun = prmts_ch(format[i + 1]);
 			if (!fun)
 			{
 				buf[comp] = '%';
-				i++;
 				comp++;
-				continue;
 			}
-			comp = fun(&buf[comp], comp, arg_val);
-			i++;
+			else
+			{
+				comp = fun(&buf[comp], comp, arg_val);
+				i++;
+			}
 		}
 		i++;
 	}
