@@ -1,3 +1,4 @@
+#include "main.h"
 #include <unistd.h>
 
 /**
@@ -10,4 +11,18 @@
 int _putchar(char c)
 {
 	return (write(1, &c, 1));
+}
+/**
+ * _prtstr - prints string
+ * @str:string pointer
+ *
+ * Return: charcaters to print count
+ */
+int _prtstr(char *str)
+{
+	int i;
+
+	for (i = 0; str[i] != '\0'; i++)
+		_putchar(str[i]);
+	return (i);
 }

@@ -20,6 +20,7 @@ int (*prmts_ch(char specifier))(char *, int, va_list)
 		{"r", fun_rev},
 		{"R", fun_rot},
 		{"s", fun_str},
+		{"S", fun_STR},
 		{"u", fun_uns},
 		{"x", fun_hex},
 		{"X", fun_HEX},

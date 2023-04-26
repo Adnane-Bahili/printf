@@ -14,6 +14,15 @@ typedef struct ptr
 
 int (*prmts_ch(char specifier))(char *, int, va_list);
 int _printf(const char *format, ...);
+
+int _putchar(char c);
+int _prtstr(char *str);
+char *conv(unsigned long int num, int b, int uc);
+int fun_STR(char *buf, int comp, va_list val);
+
+
+
+
 int _strlen(char *s);
 char *_rev(char *s, int n);
 char *_rot13(char *str);
